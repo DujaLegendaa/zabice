@@ -17,9 +17,7 @@ defmodule ZabiceWeb.Router do
   scope "/", ZabiceWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
-
-    live "/home", HomeLive
+    live "/", HomeLive, :index
   end
 
   # Other scopes may use custom stacks.

@@ -3,6 +3,12 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
+@layer components {
+  .navigation_button {
+    @apply text-white font-bold text-lg my-4 h-12 transition ease-in-out hover:text-[#5EBA83] hover:bg-white ;
+  }
+}
+.navigation_button 
 
 /* Alerts and form errors used by phx.new */
 .alert {
