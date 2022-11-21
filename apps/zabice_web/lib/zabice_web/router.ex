@@ -17,8 +17,15 @@ defmodule ZabiceWeb.Router do
   scope "/", ZabiceWeb do
     pipe_through :browser
 
+<<<<<<< Updated upstream
     live "/", HomeLive, :index
+=======
+    get "/", PageController, :index
+
+    live "/kontakt", KontaktListaLive
+>>>>>>> Stashed changes
   end
+
 
   # Other scopes may use custom stacks.
   # scope "/api", ZabiceWeb do
