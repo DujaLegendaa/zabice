@@ -1,20 +1,29 @@
 <h1 class="color-[#2f4438] text-3xl mb-10 mt-5 ml-10">Clanovi tima</h1> 
 
 <div class="grid grid-rows-2 grid-cols-2 justify-items-center gap-y-24">
-    <div class="w-1/4"> 
+    <div class="w-1/4" phx-click="details" phx-value-person="dusan"> 
         <h1 class="text-center"> <b>Dusan Veljkovic</b> </h1>
         <img class="w-inherit" src="/images/duja.png">
     </div>
-    <div class="w-1/4">
+    <div class="w-1/4" phx-click="details" phx-value-person="boris">
         <h1 class="text-center"> <b>Boris Andjelkovic</b> </h1>
         <img class="w-inherit" src="/images/boris.png">
     </div>
-    <div class="w-1/4">
+    <div class="w-1/4" phx-click="details" phx-value-person="anja">
         <h1 class="text-center"> <b>Anja Bojic</b> </h1>
         <img class="w-inherit" src="/images/anja.png">
     </div>
-    <div class="w-1/4">
+    <div class="w-1/4" phx-click="details" phx-value-person="mateja">
         <h1 class="text-center"> <b>Mateja Tomic</b> </h1>
         <img class="w-inherit" src="/images/tomic.png">
     </div>
 </div>
+
+<%= if @selected != nil do %>
+  <p><%= @selected.name %></p>
+  <p><%= @selected.title %></p>
+  <p><%= @selected.more %></p>
+  <p><%= @selected.discord %></p>
+  <p><%= @selected.instagram %></p>
+  <p><%= @selected.email %></p>
+<% end %>

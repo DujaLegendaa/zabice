@@ -16,10 +16,9 @@ defmodule ZabiceWeb.Router do
 
   scope "/", ZabiceWeb do
     pipe_through :browser
-mi
     live "/", HomeLive, :index
 
-    live "/kontakt", KontaktListaLive
+    live "/kontakt", KontaktListaLive, :index
   end
 
 
